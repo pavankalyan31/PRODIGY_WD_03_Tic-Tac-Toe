@@ -1,0 +1,88 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+}
+
+.text-image {
+    font-size: 50px;
+    font-weight: bold;
+    color: transparent; 
+    background-image: url("https://images.pexels.com/photos/1435752/pexels-photo-1435752.jpeg?auto=compress&cs=tinysrgb&w=400");
+    background-size: cover;
+    background-position: center; 
+    background-clip: text; 
+    -webkit-background-clip: text; 
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); 
+}
+
+
+label {
+    font-size: 20px;
+}
+
+select {
+    padding: 3px;
+    border-radius: 50px;
+    text-align: center;
+}
+
+.game-board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 5px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #fff;
+    transition: background-color 0.3s;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(12, 233, 229, 0.585);
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#status {
+    font-size: 1.2em;
+    margin-top: 10px;
+}
+
+@media screen and (min-width:320px) and (max-width: 720px) {
+    .text-image {
+        margin-top: 60px;
+        font-size: 25px;
+    }
+
+    .cell{
+        width: 90px;
+        height: 90px;
+        margin: 5px auto;
+    }
+}
